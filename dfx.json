@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "Porsche_backend": {
+      "main": "src/Porsche_backend/main.mo",
+      "type": "motoko"
+    },
+    "Porsche_frontend": {
+      "dependencies": [
+        "Porsche_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Porsche_frontend/src/index.html"
+      },
+      "source": [
+        "src/Porsche_frontend/assets",
+        "dist/Porsche_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
